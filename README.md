@@ -3,21 +3,110 @@
 This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.
 
 ---
+# Scenario
+Gerald has asked for a new application, similar to the previous applications in build.
+## Gerald's needs
+Gerald would like an application that gives him his entire list of supplies needed to build a house. He has a specific list of supplies that he's resposible for purchasing.
 
-You can remove everything below the above line once you're ready to edit this file.
+Gerald must purchase:
 
-## Getting Started
+2x4's (for studs and plates)
+4x4's (for posts)
+Plywood (for exterior of house)
+Drywall (for interior of house)
+Gerald will only purchase:
 
-Please read the [Final Test Requirements](./assignment/readme.md)
+8 foot long 2x4's
+8 foor long 4x4's
+4x8 foot sheets of plywood
+4x8 sheets of drywall.
+He needs enough plywood to completely cover the exterior walls of the house.
 
-## IMPORTANT NOTICE
+He needs enough drywall to completely cover the interior walls of the house, and the ceiling.
 
-DO NOT PUSH THIS REPOSITORY TO YOUR GITHUB ACCOUNT OR MAKE A PULL REQUEST INTO THE FINAL UNTIL DIRECTLY INSTRUCTED TO DO SO. THIS IS A TEST AND CANNOT BE COLLABORATED ON WITH OTHER STUDENTS.
+He needs enough 2x4's and 4x4's to frame the walls. He would like the numbers of plates, studs, and posts to be returned seperately.
 
-## Deadline For Submissions
+The smallest wall he will build is 4 feet in length.
 
-The deadline for this assignment is 5PM on Friday October 9th, 2020. No extensions can be given for this final.
+The largest wall he will build is 60 feet in length.
 
-## Notes
+He would like the program to default the wall length parameters to inches, but have an option to insert feet.
 
-This is a PUBLIC repository attached to your github account and something that you can demonstrate to potential employers. Take care to ensure professionalism for both you and your team's sake. This will be the first entry into your professional portfolio.
+He would like to save houses by customer name
+
+He would like to recall houses by customer name
+
+## Output
+Gerald has a specific output requirement, as he needs to feed this result into another application. He's given us a sample below:
+```
+{
+    "name": "Holbrook",
+    "house": {
+        "width": 103,
+        "length": 103,
+        "outsideWallArea": 39552,
+        "insideWallArea": 36864,
+        "ceilingArea": 9216
+    },
+    "materials": {
+        "lumber": {
+            "2x4": 40,
+            "4x4": 4
+        },
+        "plywood": {
+            "4x8": 9
+        },
+        "drywall": {
+            "4x8": 10
+        }
+    },
+    "waste": {
+        "lumber": {
+            "2x4": 4,
+            "4x4": 1
+        },
+        "plywood": {
+            "4x8": 1
+        },
+        "drywall": {
+            "4x8": 1
+        }
+    },
+    "purchase": {
+        "lumber": {
+            "2x4": 44,
+            "4x4": 5
+        },
+        "plywood": {
+            "4x8": 10
+        },
+        "drywall": {
+            "4x8": 11
+        }
+    }
+}
+```
+In this sample, you can see that Gerald needs the materials required seperate from the waste, and then a third section to total the purchase. There are also three attributes of the house added that can be calculated:
+
+outsideWallArea
+insideWallArea
+ceilingArea
+
+## To run this program
+Start script:
+```
+npm run start
+```
+
+Compiler:
+```
+tsc
+```
+
+Compile and start:
+```
+npm run build
+```
+
+### Note to other developers:
+In this project I use typescipt with node packet manager.
