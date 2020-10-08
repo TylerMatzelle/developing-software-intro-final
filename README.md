@@ -5,6 +5,7 @@ This respository is intended for the use of Focus College Students enrolled in t
 ---
 # Scenario
 Gerald has asked for a new application, similar to the previous applications in build.
+![Gerald]
 ## Gerald's needs
 Gerald would like an application that gives him his entire list of supplies needed to build a house. He has a specific list of supplies that he's resposible for purchasing.
 
@@ -40,7 +41,7 @@ He would like to recall houses by customer name
 Gerald has a specific output requirement, as he needs to feed this result into another application. He's given us a sample below:
 ```
 {
-    "name": "Holbrook",
+    "name": "Matzelle",
     "house": {
         "width": 103,
         "length": 103,
@@ -108,5 +109,18 @@ Compile and start:
 npm run build
 ```
 
+Lint
+```
+npm run build:lint
+```
+
+Run all scripts
+```
+npm run start:dev
+```
+
 ### Note to other developers:
-In this project I use typescipt with node packet manager.
+In this project I use typescipt to use [ESLint] with node packet manager.
+
+[ESLint]: https://eslint.org/docs/user-guide/getting-started
+[Gerald]: https://image.shutterstock.com/image-photo/construction-worker-new-house-renovation-260nw-246224482.jpg
