@@ -3,10 +3,14 @@
 This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.
 
 ---
+
 # Scenario
+
 Gerald has asked for a new application, similar to the previous applications in build.
 ![Gerald]
+
 ## Gerald's needs
+
 Gerald would like an application that gives him his entire list of supplies needed to build a house. He has a specific list of supplies that he's resposible for purchasing.
 
 Gerald must purchase:
@@ -38,7 +42,9 @@ He would like to save houses by customer name
 He would like to recall houses by customer name
 
 ## Output
+
 Gerald has a specific output requirement, as he needs to feed this result into another application. He's given us a sample below:
+
 ```
 {
     "name": "Matzelle",
@@ -87,6 +93,7 @@ Gerald has a specific output requirement, as he needs to feed this result into a
     }
 }
 ```
+
 In this sample, you can see that Gerald needs the materials required seperate from the waste, and then a third section to total the purchase. There are also three attributes of the house added that can be calculated:
 
 outsideWallArea
@@ -94,33 +101,47 @@ insideWallArea
 ceilingArea
 
 ## To run this program
+
 Start script:
+
 ```
 npm run start
 ```
 
 Compiler:
+
 ```
 tsc
 ```
 
 Compile and start:
+
 ```
 npm run build
 ```
 
 Lint
+
 ```
 npm run build:lint
 ```
 
+format
+
+```
+npm run build:prettier
+```
+
 Run all scripts
+
 ```
 npm run start:dev
 ```
 
 ### Note to other developers:
-In this project I use typescipt to use [ESLint] with node packet manager.
 
-[ESLint]: https://eslint.org/docs/user-guide/getting-started
-[Gerald]: https://image.shutterstock.com/image-photo/construction-worker-new-house-renovation-260nw-246224482.jpg
+In this project I use typescipt to use [ESLint] and [Prettier] with node packet manager.
+
+[gerald]: https://image.shutterstock.com/image-photo/construction-worker-new-house-renovation-260nw-246224482.jpg
+[eslint]: https://eslint.org/docs/user-guide/getting-started
+[prettier]: https://prettier.io/docs/en/install.html

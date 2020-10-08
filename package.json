@@ -1,15 +1,21 @@
 {
   "name": "acsd-final-tylermatzelle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "start:dev": "npm run build && npm run build:lint",
+    "start:dev": "npm run build:lint && npm run build:prettier && npm run compile && npm run start",
+
     "compile": "tsc",
+
     "build": "npm run compile && npm run start",
     "build:lint": "npx eslint src/**/*.ts --ext .ts",
-    "build:lint:fix": "eslint {tests,src}/**/*.ts --ext .ts --fix"
+    "build:prettier": "prettier --check {tests,src}/**/*.ts",
+
+    "build:fix": "npm run build:lint:fix && npm run build:prettier:fix",
+    "build:lint:fix": "eslint {tests,src}/**/*.ts --ext .ts --fix",
+    "build:prettier:fix": "prettier --write {tests,src}/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -22,7 +28,18 @@
   },
   "homepage": "https://github.com/TylerMatzelle/developing-software-intro-final#readme",
   "devDependencies": {
-    "eslint": "^7.10.0"
+    "@types/node": "^14.11.6",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
   },
   "dependencies": {}
 }
