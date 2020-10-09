@@ -24,3 +24,7 @@ function calcWallPlywood(width:number, length:number){
 function calcMaterials(width:number, length:number, calcWallLumber, calcWallDrywall, calcWallPlywood){
     
 }
+
+function calcWaste(){
+    
+}
