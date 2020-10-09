@@ -8,3 +8,7 @@ export function calcHouseMaterials(width:number, length:number, units:boolean ,n
 export function getHouseMaterials(name:string){
     console.log('string');
 }
+
+export function calcWallLumber(inches:number){
+        
+}
