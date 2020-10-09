@@ -1,5 +1,5 @@
 import { Arguments, Argv } from "yargs";
-import { calcHouseMaterials } from './calculator/index';
+import { calcHouseMaterials, getHouseMaterials } from './calculator/index';
 import yargs = require('yargs');
 
 export function calculateHouseMaterials(yargs: Argv):void{
@@ -60,7 +60,11 @@ export function calculateHouseMaterials(yargs: Argv):void{
                 args.name
             );
 
-            console.log( requirements );
+            const customer = getHouseMaterials(
+                args.name
+            );
+
+            console.log( requirements, customer );
 
         }
     );
