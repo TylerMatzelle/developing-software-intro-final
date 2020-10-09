@@ -103,31 +103,26 @@ ceilingArea
 ## To run this program
 
 Start script:
-
 ```
 npm run start
 ```
 
 Compiler:
-
 ```
 tsc
 ```
 
 Compile and start:
-
 ```
 npm run build
 ```
 
 Lint
-
 ```
 npm run build:lint
 ```
 
 format
-
 ```
 npm run build:prettier
 ```
@@ -137,8 +132,12 @@ Test
 npm run test
 ```
 
-Run all scripts
+Test with Coverage
+```
+npm run coverage
+```
 
+Run all scripts
 ```
 npm run start:dev
 ```
