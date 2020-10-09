@@ -14,5 +14,9 @@ export function calcWallLumber(inches:number){
 }
 
 export function calcWallDrywall(width:number, length:number){
+
+}
+
+function calcWallPlywood(width:number, length:number){
     
 }
