@@ -1,10 +1,12 @@
-import { hello } from "../src/index";
+import { calcHouseMaterials, getHouseMaterials } from "../src/index";
 import { expect } from "chai";
 import "mocha";
 
-describe("Hello function", () => {
-    it("should return Hello", () => {
+/*
+describe("Yargs commands", () => {
+    it("should return specified parameters", () => {
         const result = hello();
         expect(result).to.equal("Hello");
     });
 });
+*/
