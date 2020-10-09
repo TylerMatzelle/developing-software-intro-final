@@ -26,5 +26,9 @@ function calcMaterials(width:number, length:number, calcWallLumber, calcWallDryw
 }
 
 function calcWaste(){
+
+}
+
+function calcPurchase(){
     
 }
