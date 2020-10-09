@@ -137,6 +137,11 @@ Test with Coverage
 npm run coverage
 ```
 
+To input parameters
+```
+node dist/index.js --width x --length y --inFeet(optional) --name (Name of customer)
+```
+
 Run all scripts
 ```
 npm run start:dev
