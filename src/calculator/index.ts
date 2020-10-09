@@ -18,5 +18,9 @@ export function calcWallDrywall(width:number, length:number){
 }
 
 function calcWallPlywood(width:number, length:number){
+
+}
+
+function calcMaterials(width:number, length:number, calcWallLumber, calcWallDrywall, calcWallPlywood){
     
 }
