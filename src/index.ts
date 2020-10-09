@@ -1,7 +1,8 @@
-import { Argv } from "yargs";
+import { Arguments, Argv } from "yargs";
+import { calcHouseMaterials } from './calculator/index';
 import yargs = require('yargs');
 
-export function calcHouseMaterials(yargs: Argv):void{
+export function calculateHouseMaterials(yargs: Argv):void{
 
     // create a new yargs command
     yargs.command(
@@ -35,12 +36,37 @@ export function calcHouseMaterials(yargs: Argv):void{
                 type: 'string',
                 alias: 'n',
                 description: 'name of the house'
-            }
+            },
+        },
+
+        // define the function we want to run once the arguments are parsed
+        function (
+            args: Arguments<{
+                width: number;
+                length: number;
+                isFeet: boolean;
+                name: string;
+                w: number;
+                l: number;
+                F: boolean;
+                n: string;
+            }>
+        ) {
+            
+            const requirements = calcHouseMaterials (
+                args.width,
+                args.length,
+                args.isFeet,
+                args.name
+            );
+
+            console.log( requirements );
+
         }
     );
 }
 
-export function getHouseMaterials(yargs: Argv): void{
+export function getAllHouseMaterials(yargs: Argv): void{
     yargs.command(
         "get-house-materials",
         "retrives the calculated materials",
@@ -48,13 +74,14 @@ export function getHouseMaterials(yargs: Argv): void{
             name: {
                 type: 'string',
                 alias: 'n',
-                description: 'name of the house'
+                description: 'name of the house' 
             }
         }
     )
 }
 
-console.log(calcHouseMaterials, getHouseMaterials);
+calculateHouseMaterials(yargs);
+getAllHouseMaterials(yargs);
 
 // tell yargs to include the --help flag
 yargs.help();

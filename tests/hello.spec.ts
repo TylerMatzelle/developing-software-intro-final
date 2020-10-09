@@ -1,4 +1,4 @@
-import { calcHouseMaterials, getHouseMaterials } from "../src/index";
+import { calculateHouseMaterials, getAllHouseMaterials } from "../src/index";
 import { expect } from "chai";
 import "mocha";
 
