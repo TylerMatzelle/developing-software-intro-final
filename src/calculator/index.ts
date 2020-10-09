@@ -10,5 +10,9 @@ export function getHouseMaterials(name:string){
 }
 
 export function calcWallLumber(inches:number){
-        
+
+}
+
+export function calcWallDrywall(width:number, length:number){
+    
 }
