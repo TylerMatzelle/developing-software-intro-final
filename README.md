@@ -132,6 +132,11 @@ format
 npm run build:prettier
 ```
 
+Test
+```
+npm run test
+```
+
 Run all scripts
 
 ```
@@ -140,8 +145,10 @@ npm run start:dev
 
 ### Note to other developers:
 
-In this project I use typescipt to use [ESLint] and [Prettier] with node packet manager.
+In this project I use typescipt to use [ESLint], [Prettier], [Mocha], and [Chai] with node packet manager.
 
 [gerald]: https://image.shutterstock.com/image-photo/construction-worker-new-house-renovation-260nw-246224482.jpg
 [eslint]: https://eslint.org/docs/user-guide/getting-started
 [prettier]: https://prettier.io/docs/en/install.html
+[Mocha]: 
+[Chai]: https://www.npmjs.com/package/chai
